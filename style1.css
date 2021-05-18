@@ -1,0 +1,37 @@
+@import "https://fonts.googleapis.com/css?family=Roboto+Mono:100";
+html, body {
+  font-family: 'Roboto Mono', monospace;
+  background: #16191b;
+  height: 100%;
+}
+
+.container {
+  padding-top: 100px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.text {
+  font-weight: 100;
+  font-size: 18px;
+  color: #e2e6e8;
+}
+
+.text-wrap {
+  display: block;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 150ms ease-in;
+  transition-delay: 150ms;
+}
+
+.text-wrap.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.d {
+  color: #757575;
+}
