@@ -1,6 +1,7 @@
 @import "https://fonts.googleapis.com/css?family=Roboto+Mono:100";
-html, body {
-  font-family: 'Roboto Mono', monospace;
+html,
+body {
+  font-family: "Roboto Mono", monospace;
   background: #16191b;
   height: 100%;
 }
