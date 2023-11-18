@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <meta
+      name="google-site-verification"
+      content="s4KoZ36gRsSO4rC23-fUts5MGzLDpOvljWOwjVNSjGg"
+    />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#8DFFA8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      href="/assets/studiofeixensansedgytrial-regular-webfont.584d8b9a.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/assets/studiofeixensansedgytrial-medium-webfont.49f090a1.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/assets/studiofeixensansedgytrial-bold-webfont.0b04eaa6.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/assets/StudioFeixenSans-Regular.83774609.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/assets/StudioFeixenSans-Medium.db70acf2.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/assets/StudioFeixenSans-Bold.272f2ecc.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/assets/StudioFeixenSans-Book.5d7370a8.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <title data-vm-ssr="true">Studio 9P — Production digitale</title>
+    <meta
+      name="description"
+      content="Nous sommes un studio qui conçoit et réalise des aventures  pour le web. Nous sommes  studio 9p."
+      data-vm-ssr="true"
+    />
+    <meta
+      property="og:title"
+      content="Studio 9P — Production digitale"
+      data-vm-ssr="true"
+    />
+    <meta property="og:sitename" content="Studio 9p" data-vm-ssr="true" />
+    <meta
+      property="og:url"
+      content="https://studio9p.com//"
+      data-vm-ssr="true"
+    />
+    <meta property="og:type" content="website" data-vm-ssr="true" />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/neuvieme-page/image/upload/v1644937258/studio-9p/meta.png"
+      data-vm-ssr="true"
+    />
+    <meta
+      property="og:description"
+      content="Nous sommes un studio qui conçoit et réalise des aventures  pour le web. Nous sommes  studio 9p."
+      data-vm-ssr="true"
+    />
+    <!---->
+    <style>
+      @font-face {
+        font-family: StudioFeixenSans;
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/assets/StudioFeixenSans-Regular.83774609.woff2)
+            format("woff2"),
+          url(/assets/StudioFeixenSans-Regular.becef7fa.woff) format("woff"),
+          url(/assets/StudioFeixenSans-Regular.59683df9.ttf) format("truetype"),
+          url(/assets/StudioFeixenSans-Regular.5246d78f.otf) format("opentype");
+      }
+      @font-face {
+        font-family: StudioFeixenSans;
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(/assets/StudioFeixenSans-Medium.db70acf2.woff2) format("woff2"),
+          url(/assets/StudioFeixenSans-Medium.fc61724b.woff) format("woff"),
+          url(/assets/StudioFeixenSans-Medium.9a8ebcf8.ttf) format("truetype"),
+          url(/assets/StudioFeixenSans-Medium.152e4838.otf) format("opentype");
+      }
+      @font-face {
+        font-family: StudioFeixenSans;
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(/assets/StudioFeixenSans-Bold.272f2ecc.woff2) format("woff2"),
+          url(/assets/StudioFeixenSans-Bold.d876c0a0.woff) format("woff"),
+          url(/assets/StudioFeixenSans-Bold.d3ddb61e.ttf) format("truetype"),
+          url(/assets/StudioFeixenSans-Bold.f784a396.otf) format("opentype");
+      }
+      @font-face {
+        font-family: StudioFeixenSans;
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(/assets/StudioFeixenSans-Book.5d7370a8.woff2) format("woff2"),
+          url(/assets/StudioFeixenSans-Book.378f0787.woff) format("woff"),
+          url(/assets/StudioFeixenSans-Book.d7240482.ttf) format("truetype"),
+          url(/assets/StudioFeixenSans-Book.ebd05d3e.otf) format("opentype");
+      }
+      .cursor {
+        z-index: 999;
+        position: fixed;
+        top: var(--y);
+        left: var(--x);
+        width: var(--size);
+        height: var(--size);
+        transform: translate(-50%, -50%);
+      }
+      .cursor--auto {
+        transform-origin: 0% 0%;
+        transform: translate(-6%, -6%);
+        animation: 0.5s forwards pointerRotate;
+      }
+      @keyframes pointerRotate {
+        0% {
+          transform: translate(-6%, -6%) rotate(30deg);
+        }
+        to {
+          transform: translate(-6%, -6%) rotate(0);
+        }
+      }
+      .link {
+        font-family: StudioFeixenSans, sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.045em;
+      }
+      .link {
+        text-decoration: underline;
+        text-transform: uppercase;
+        display: inline-table;
+        vertical-align: middle;
+        transform: translateY(50px);
+        opacity: 0;
+        will-change: transform, opacity, color;
+      }
+      .link__arrowIcon {
+        margin-left: 5px;
+        display: inline-block;
+      }
+      .splitedText br {
+        display: block;
+        margin-top: 20px;
+      }
+      h1[data-v-229df1f8] {
+        font-family: StudioFeixenSans, sans-serif;
+        font-size: 120px;
+        line-height: 90px;
+        letter-spacing: -0.045em;
+      }
+      .title[data-v-229df1f8] {
+        line-height: 0.9;
+        font-weight: 700;
+        color: var(--color);
+        z-index: 2;
+        position: relative;
+      }
+      @media (max-width: 1023px) {
+        h1[data-v-229df1f8] {
+          font-size: 65px;
+        }
+      }
+      .paragraph .icon-svg svg {
+        width: 25px;
+        height: 25px;
+      }
+      .image:not(.image--loaded) > :first-child {
+        visibility: hidden;
+      }
+      .image img,
+      .image picture {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+      .image.image--cover picture img {
+        object-fit: cover;
+      }
+      .icon-svg {
+        position: relative;
+        display: inline-block;
+        width: 31px;
+        height: 10px;
+      }
+      .icon-svg svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .aboutSection[data-v-07bd263c] {
+        padding: var(--border-padding);
+        text-align: left;
+        --column-gap: 10px;
+        position: relative;
+      }
+      .aboutSection--beforeGradient[data-v-07bd263c]:before {
+        width: 100vw;
+        height: 20vh;
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0) 0,
+          #000 95%,
+          #000 100%
+        );
+        content: "";
+        display: block;
+        position: absolute;
+        top: 1px;
+        left: 50%;
+        transform: translate(-50%) translateY(-100%);
+      }
+      .aboutSection__bottom[data-v-07bd263c] {
+        grid-column: span 13;
+        text-transform: uppercase;
+      }
+      @media (max-width: 767px) {
+        .aboutSection--beforeGradient[data-v-07bd263c]:before {
+          height: 10vh;
+        }
+        .aboutSection[data-v-07bd263c] {
+          padding: 70px var(--border-padding);
+        }
+        .aboutSection__bottom[data-v-07bd263c] {
+          grid-column: span 6;
+        }
+      }
+      .aboutSection__bottomLeft[data-v-07bd263c] {
+        grid-column: span 6;
+        margin-top: -45px;
+        max-width: 100%;
+      }
+      @media (max-width: 1024px) {
+        .aboutSection__bottom[data-v-07bd263c] {
+          grid-column: span 6;
+        }
+        .aboutSection__bottomLeft[data-v-07bd263c] {
+          grid-column: span 5;
+          margin-top: -25px;
+        }
+      }
+      .aboutSection__topLeft[data-v-07bd263c] {
+        grid-column: span 6;
+        text-transform: uppercase;
+      }
+      .aboutSection__topRight[data-v-07bd263c] {
+        grid-column: 7/13;
+        padding-left: 40px;
+      }
+      @media (max-width: 767px) {
+        .aboutSection__topRight[data-v-07bd263c] {
+          margin-top: 70px;
+          padding-left: 0;
+        }
+        .teamSection .title[data-v-07bd263c] {
+          font-size: 15vw;
+        }
+      }
+      .aboutSection__more[data-v-07bd263c] {
+        margin-top: 95px;
+        width: 100%;
+        text-align: center;
+      }
+      .aboutSection__more[data-v-07bd263c] {
+        display: block;
+      }
+      @media (max-width: 1024px) {
+        .aboutSection__topRight[data-v-07bd263c] {
+          grid-column: 1/7;
+        }
+        .aboutSection__more[data-v-07bd263c] {
+          margin-bottom: 70px;
+        }
+      }
+      .sectionSeparator[data-v-07bd263c] {
+        width: 100vw;
+      }
+      #app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #fff;
+        overflow-x: hidden;
+      }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      :root {
+        --c-white: white;
+        --c-black: black;
+        --c-grey: #d8d8d8;
+        --c-yellow: #e1ff31;
+        --c-green: #8dffa8;
+        --c-brown: #a19e81;
+      }
+      .e-feixensans-body {
+        font-family: StudioFeixenSans, sans-serif;
+        font-size: 17px;
+        line-height: 30px;
+        letter-spacing: 0;
+      }
+      :root {
+        --border-padding: 87px;
+      }
+      @media (min-width: 1025px) {
+        :root {
+          --content-max-width: 1300px;
+          --border-padding: 115px;
+        }
+      }
+      @media (min-width: 1360px) {
+        :root {
+          --content-max-width: 1300px;
+          --border-padding: 120px;
+        }
+      }
+      @media (max-width: 768px) {
+        :root {
+          --border-padding: 28px;
+        }
+      }
+      a,
+      body,
+      div,
+      h1,
+      html,
+      img,
+      p,
+      span {
+        border: 0;
+        font: inherit;
+        font-size: 100%;
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline;
+      }
+      body {
+        line-height: 1;
+      }
+      .u-uppercase {
+        text-transform: uppercase;
+      }
+      .u-hidden {
+        visibility: hidden;
+      }
+      .imageShutter > :first-child:after {
+        background-color: var(--image-shutter-background);
+        content: "";
+        display: block;
+        height: 99%;
+        width: 99.5%;
+        position: absolute;
+        transform-origin: center top;
+        transform: scaleY(var(--after-scale-y));
+        top: 0;
+        left: 0.25%;
+        z-index: 0;
+        will-change: transform;
+      }
+      .imageShutter picture {
+        overflow: hidden;
+        position: relative;
+        transform: translateY(var(--picture-translate-y));
+        z-index: 1;
+      }
+      .imageShutter img {
+        transform: translateY(var(--image-translate-y));
+      }
+      :root {
+        --column-count: 6;
+        --column-gap: 30px;
+        --column-width: calc(
+          (
+              min(100vw, var(--content-max-width)) -
+                (var(--column-count) * var(--column-gap))
+            ) / var(--column-count)
+        );
+      }
+      @media (min-width: 768px) {
+        :root {
+          --column-count: 8;
+        }
+      }
+      @media (min-width: 1025px) {
+        :root {
+          --column-count: 12;
+        }
+      }
+      .o-grid {
+        column-gap: var(--column-gap);
+        display: grid;
+        grid-template-columns: repeat(var(--column-count), 1fr);
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1350px;
+      }
+      .o-cardGrid {
+        margin: 140px auto;
+        display: grid;
+        grid-template-columns: repeat(var(--column-count), 1fr);
+        --gap: var(--column-gap);
+        max-width: var(--content-max-width);
+        gap: var(--gap);
+        grid-auto-rows: minmax(90px, 395px);
+      }
+      @media (max-width: 767px) {
+        .o-cardGrid {
+          margin: 90px auto;
+          grid-auto-rows: minmax(90px, 280px);
+        }
+      }
+      *,
+      :after,
+      :before {
+        box-sizing: inherit;
+      }
+      body,
+      html {
+        width: 100%;
+      }
+      html {
+        box-sizing: border-box;
+        height: 100%;
+      }
+      body {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        -webkit-overflow-scrolling: touch;
+        -webkit-text-size-adjust: 100%;
+        background-color: var(--c-black);
+        overflow: hidden;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      a {
+        color: inherit;
+        text-decoration: unset;
+      }
+      :root {
+        --swiper-theme-color: #007aff;
+      }
+      :root {
+        --swiper-navigation-size: 44px;
+      }
+    </style>
+    <script
+      type="module"
+      crossorigin=""
+      src="/assets/index.7fefbec7.js"
+    ></script>
+    <link rel="modulepreload" href="/assets/vendor.1e7a9723.js" />
+    <link
+      rel="stylesheet"
+      href="/assets/index.e98c17de.css"
+      media="print"
+      onload="this.media='all'"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <!--[--><!--[--><!--]-->
+      <div style="height: 100vh; overflow: hidden">
+        <img
+          src="/assets/cursor.dedc4661.svg"
+          alt="cursor icon"
+          class="cursor u-hidden cursor--auto"
+          style="--x: 0px; --y: 0px; --size: 55px"
+        /><!---->
+        <main>
+          <!----><!----><!---->
+          <div class="pageHome" data-v-07bd263c>
+            <!---->
+            <div
+              class="aboutSection aboutSection--beforeGradient"
+              data-v-07bd263c
+            >
+              <div class="o-grid" data-v-07bd263c>
+                <span class="aboutSection__topLeft" data-v-07bd263c
+                  ><p data-v-07bd263c>à propos</p>
+                  <h1
+                    ref_key="root"
+                    class="splitedText u-hidden title u-uppercase"
+                    style="--color: var(--c-green)"
+                    data-v-07bd263c
+                    data-v-229df1f8
+                  >
+                    <!--[--><!--[-->we are Studio 9p<!--]--><!--]-->
+                  </h1></span
+                >
+                <div class="aboutSection__topRight" data-v-07bd263c>
+                  <p
+                    ref_key="root"
+                    class="splitedText u-hidden e-feixensans-body paragraph"
+                    data-v-07bd263c
+                  >
+                    <!--[--><!--[-->Depuis dix ans, le web
+                    <span class="icon-svg" data-v-07bd263c
+                      ><svg
+                        width="98"
+                        height="98"
+                        viewBox="0 0 98 98"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.14999 49.07H94.3"
+                          stroke="#88FFA4"
+                          stroke-width="5.82"
+                          stroke-miterlimit="10"
+                        ></path>
+                        <path
+                          d="M94.3099 49.07C94.3099 58.0849 91.6368 66.8973 86.6284 74.3929C81.62 81.8885 74.5013 87.7306 66.1727 91.1804C57.844 94.6303 48.6794 95.5329 39.8378 93.7742C30.9961 92.0155 22.8745 87.6744 16.5001 81.2999C10.1256 74.9255 5.78448 66.8039 4.02576 57.9622C2.26705 49.1206 3.16967 39.9559 6.61951 31.6273C10.0694 23.2986 15.9115 16.18 23.4071 11.1716C30.9027 6.16324 39.7151 3.49 48.73 3.49C54.7156 3.49 60.6427 4.66893 66.1727 6.95954C71.7027 9.25015 76.7274 12.6076 80.9599 16.8401C85.1924 21.0726 88.5498 26.0972 90.8404 31.6273C93.131 37.1573 94.3099 43.0844 94.3099 49.07V49.07Z"
+                          stroke="#88FFA4"
+                          stroke-width="5.82"
+                          stroke-miterlimit="10"
+                        ></path>
+                        <path
+                          d="M70.6 49.07C70.6 74.24 60.81 94.64 48.73 94.64C36.65 94.64 26.87 74.24 26.87 49.07C26.87 23.9 36.66 3.49 48.73 3.49C60.8 3.49 70.6 23.9 70.6 49.07Z"
+                          stroke="#88FFA4"
+                          stroke-width="5.82"
+                          stroke-miterlimit="10"
+                        ></path>
+                        <path
+                          d="M48.73 3.49V94.64"
+                          stroke="#88FFA4"
+                          stroke-width="5.82"
+                          stroke-miterlimit="10"
+                        ></path>
+                        <path
+                          d="M94.31 49.07C94.31 60.59 73.9 69.94 48.73 69.94C23.56 69.94 3.16 60.59 3.16 49.07C3.16 37.55 23.56 28.19 48.73 28.19C73.9 28.19 94.31 37.54 94.31 49.07Z"
+                          stroke="#88FFA4"
+                          stroke-width="5.82"
+                          stroke-miterlimit="10"
+                        ></path></svg
+                    ></span>
+                    est notre terrain de jeu. Nous connaissons par cœur ses
+                    lois, ses
+                    <span class="icon-svg" data-v-07bd263c
+                      ><svg
+                        width="78"
+                        height="75"
+                        viewBox="0 0 78 75"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.95001 59.47L16.78 71.97L43.09 46.33L48.48 62.14L74.42 3.16L14.85 28.06L30.25 33.83L3.95001 59.47Z"
+                          stroke="#88FFA4"
+                          stroke-width="6"
+                          stroke-linejoin="round"
+                        ></path></svg
+                    ></span>
+                    raccourcis, ses mille jargons et ses secrets spots. Et ça
+                    fait dix ans qu’on s’y amuse avec vous.
+                    <br data-v-07bd263c /><br data-v-07bd263c />
+                    Nous sommes un studio qui conçoit et réalise des aventures
+                    <span class="icon-svg" data-v-07bd263c
+                      ><svg
+                        width="99"
+                        height="93"
+                        viewBox="0 0 99 93"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M49.3 27.75C49.25 -0.810013 3.39999 -7.93001 3.44999 28.75C3.49999 65.43 48.4 89.87 48.4 89.87H50.4C50.4 89.87 95.21 65.33 95.16 28.61C95.11 -8.11003 49.25 -0.810013 49.3 27.75Z"
+                          stroke="#88FFA4"
+                          stroke-width="5.82"
+                          stroke-miterlimit="10"
+                        ></path></svg
+                    ></span>
+                    pour le web. <br data-v-07bd263c /><br data-v-07bd263c />
+                    Nous sommes
+                    <span class="icon-svg" data-v-07bd263c
+                      ><svg
+                        width="98"
+                        height="98"
+                        viewBox="0 0 98 98"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.14999 49.07H94.3"
+                          stroke="#88FFA4"
+                          stroke-width="5.82"
+                          stroke-miterlimit="10"
+                        ></path>
+                        <path
+                          d="M94.3099 49.07C94.3099 58.0849 91.6368 66.8973 86.6284 74.3929C81.62 81.8885 74.5013 87.7306 66.1727 91.1804C57.844 94.6303 48.6794 95.5329 39.8378 93.7742C30.9961 92.0155 22.8745 87.6744 16.5001 81.2999C10.1256 74.9255 5.78448 66.8039 4.02576 57.9622C2.26705 49.1206 3.16967 39.9559 6.61951 31.6273C10.0694 23.2986 15.9115 16.18 23.4071 11.1716C30.9027 6.16324 39.7151 3.49 48.73 3.49C54.7156 3.49 60.6427 4.66893 66.1727 6.95954C71.7027 9.25015 76.7274 12.6076 80.9599 16.8401C85.1924 21.0726 88.5498 26.0972 90.8404 31.6273C93.131 37.1573 94.3099 43.0844 94.3099 49.07V49.07Z"
+                          stroke="#88FFA4"
+                          stroke-width="5.82"
+                          stroke-miterlimit="10"
+                        ></path>
+                        <path
+                          d="M70.6 49.07C70.6 74.24 60.81 94.64 48.73 94.64C36.65 94.64 26.87 74.24 26.87 49.07C26.87 23.9 36.66 3.49 48.73 3.49C60.8 3.49 70.6 23.9 70.6 49.07Z"
+                          stroke="#88FFA4"
+                          stroke-width="5.82"
+                          stroke-miterlimit="10"
+                        ></path>
+                        <path
+                          d="M48.73 3.49V94.64"
+                          stroke="#88FFA4"
+                          stroke-width="5.82"
+                          stroke-miterlimit="10"
+                        ></path>
+                        <path
+                          d="M94.31 49.07C94.31 60.59 73.9 69.94 48.73 69.94C23.56 69.94 3.16 60.59 3.16 49.07C3.16 37.55 23.56 28.19 48.73 28.19C73.9 28.19 94.31 37.54 94.31 49.07Z"
+                          stroke="#88FFA4"
+                          stroke-width="5.82"
+                          stroke-miterlimit="10"
+                        ></path></svg
+                    ></span>
+                    Studio 9p. <br data-v-07bd263c /><br
+                      data-v-07bd263c
+                    /><!--]--><!--]-->
+                  </p>
+                  <div ref_key="root" data-v-07bd263c>
+                    <a href="/studio" class=""
+                      ><span class="link" style="color: #ffffff"
+                        ><!--[--><!--[-->en <br data-v-07bd263c />savoir
+                        <br data-v-07bd263c />plus<!--]--><!--]--><span
+                          class="link__arrowIcon"
+                          ><svg
+                            width="18"
+                            height="14"
+                            viewbox="0 0 18 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="transform: rotate(0deg)"
+                          >
+                            <path
+                              d="M0 7.2124H15.6"
+                              stroke="#FFFFFF"
+                              stroke-width="1.5"
+                              stroke-miterlimit="10"
+                            ></path>
+                            <path
+                              d="M9.8999 1L16.0999 7.21289L9.8999 13.4258"
+                              stroke="#FFFFFF"
+                              stroke-width="1.5"
+                              stroke-miterlimit="10"
+                            ></path></svg></span></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="o-cardGrid" data-v-07bd263c><!--[--><!--]--></div>
+              <div ref_key="root" class="aboutSection__more" data-v-07bd263c>
+                <a href="/work" class=""
+                  ><span class="link" style="color: #ffffff"
+                    ><!--[-->j&#39;en veux plus<!--]--><span
+                      class="link__arrowIcon"
+                      ><svg
+                        width="18"
+                        height="14"
+                        viewbox="0 0 18 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="transform: rotate(90deg)"
+                      >
+                        <path
+                          d="M0 7.2124H15.6"
+                          stroke="#FFFFFF"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                        ></path>
+                        <path
+                          d="M9.8999 1L16.0999 7.21289L9.8999 13.4258"
+                          stroke="#FFFFFF"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                        ></path></svg></span></span
+                ></a>
+              </div>
+            </div>
+            <hr class="sectionSeparator" data-v-07bd263c />
+            <!---->
+            <div class="aboutSection teamSection" data-v-07bd263c>
+              <div class="o-grid" data-v-07bd263c>
+                <span class="aboutSection__bottom" data-v-07bd263c
+                  ><p data-v-07bd263c>
+                    nous ne sommes ni des aliens, ni des nerds
+                  </p>
+                  <h1
+                    ref_key="root"
+                    class="splitedText u-hidden title u-uppercase"
+                    style="--color: var(--c-yellow)"
+                    data-v-07bd263c
+                    data-v-229df1f8
+                  >
+                    <!--[--><!--[--><!--[-->que des <br data-v-07bd263c />
+                    numéros 9 <br data-v-07bd263c />
+                    dans la team<!--]--><!--]--><!--]-->
+                  </h1></span
+                >
+                <div
+                  ref_key="root"
+                  class="
+                    imageShutter
+                    image--cover image
+                    aboutSection__bottomLeft
+                  "
+                  style="--aspect-ratio: 1.4296116504854368"
+                  data-v-07bd263c
+                >
+                  <div
+                    style="display: none"
+                    class="aboutSection__bottomLeft"
+                    data-v-07bd263c
+                  >
+                    <picture
+                      ><!--[--><!--]--><img alt="Authentique casquettes kidiz"
+                    /></picture>
+                  </div>
+                </div>
+                <span class="aboutSection__bottomRight" data-v-07bd263c
+                  ><p
+                    ref_key="root"
+                    class="splitedText u-hidden e-feixensans-body paragraph"
+                    data-v-07bd263c
+                  >
+                    <!--[--><!--[-->Avec vous, nous partageons la même langue et
+                    la même aversion pour le verbiage. On est même presque sûrs
+                    que vous aimerez notre humour. <br data-v-07bd263c /><br
+                      data-v-07bd263c
+                    />
+                    Bref, nous sommes juste une équipe de spécialistes qui
+                    adorent leur métier, et qui aiment encore plus le partager.
+                    Venez avec des problèmes, nous en ferons des solutions.
+                    <br data-v-07bd263c /><br data-v-07bd263c /><!--]--><!--]-->
+                  </p>
+                  <div
+                    ref_key="root"
+                    class="aboutSection__bottomRightLink"
+                    data-v-07bd263c
+                  >
+                    <a href="/studio#team" class=""
+                      ><span class="link" style="color: #ffffff"
+                        ><!--[-->Meet<br data-v-07bd263c />
+                        the team<!--]--><span class="link__arrowIcon"
+                          ><svg
+                            width="18"
+                            height="14"
+                            viewbox="0 0 18 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="transform: rotate(0deg)"
+                          >
+                            <path
+                              d="M0 7.2124H15.6"
+                              stroke="#FFFFFF"
+                              stroke-width="1.5"
+                              stroke-miterlimit="10"
+                            ></path>
+                            <path
+                              d="M9.8999 1L16.0999 7.21289L9.8999 13.4258"
+                              stroke="#FFFFFF"
+                              stroke-width="1.5"
+                              stroke-miterlimit="10"
+                            ></path></svg></span></span
+                    ></a>
+                  </div>
+                  <hr data-v-07bd263c
+                /></span>
+              </div>
+            </div>
+            <div class="shellNavigation" data-v-07bd263c>
+              <!--[--><a href="/work" class="shellNavigation__link"
+                >work
+                <span
+                  class="shellNavigation__background"
+                  style="--left-cursor: 10%; --right-cursor: 10%"
+                ></span>
+                <div ref_key="root" class="shellNavigation__goLink">
+                  <a href="/work" class=""
+                    ><span class="link" style="color: #8dffa8"
+                      ><!--[--><!--[-->c&#39;est par
+                      <br />ici<!--]--><!--]--><span class="link__arrowIcon"
+                        ><svg
+                          width="18"
+                          height="14"
+                          viewbox="0 0 18 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          style="transform: rotate(0deg)"
+                        >
+                          <path
+                            d="M0 7.2124H15.6"
+                            stroke="#8DFFA8"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          ></path>
+                          <path
+                            d="M9.8999 1L16.0999 7.21289L9.8999 13.4258"
+                            stroke="#8DFFA8"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          ></path></svg></span></span
+                  ></a></div></a
+              ><a href="/studio" class="shellNavigation__link"
+                >studio
+                <span
+                  class="shellNavigation__background"
+                  style="--left-cursor: 10%; --right-cursor: 10%"
+                ></span>
+                <div ref_key="root" class="shellNavigation__goLink">
+                  <a href="/studio" class=""
+                    ><span class="link" style="color: #8dffa8"
+                      ><!--[--><!--[-->c&#39;est par
+                      <br />ici<!--]--><!--]--><span class="link__arrowIcon"
+                        ><svg
+                          width="18"
+                          height="14"
+                          viewbox="0 0 18 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          style="transform: rotate(0deg)"
+                        >
+                          <path
+                            d="M0 7.2124H15.6"
+                            stroke="#8DFFA8"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          ></path>
+                          <path
+                            d="M9.8999 1L16.0999 7.21289L9.8999 13.4258"
+                            stroke="#8DFFA8"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          ></path></svg></span></span
+                  ></a></div></a
+              ><a href="/contact" class="shellNavigation__link"
+                >contact
+                <span
+                  class="shellNavigation__background"
+                  style="--left-cursor: 10%; --right-cursor: 10%"
+                ></span>
+                <div ref_key="root" class="shellNavigation__goLink">
+                  <a href="/contact" class=""
+                    ><span class="link" style="color: #8dffa8"
+                      ><!--[--><!--[-->c&#39;est par
+                      <br />ici<!--]--><!--]--><span class="link__arrowIcon"
+                        ><svg
+                          width="18"
+                          height="14"
+                          viewbox="0 0 18 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          style="transform: rotate(0deg)"
+                        >
+                          <path
+                            d="M0 7.2124H15.6"
+                            stroke="#8DFFA8"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          ></path>
+                          <path
+                            d="M9.8999 1L16.0999 7.21289L9.8999 13.4258"
+                            stroke="#8DFFA8"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          ></path></svg></span></span
+                  ></a></div></a
+              ><!--]-->
+            </div>
+            <footer ref_key="root" class="shellFooter" data-v-07bd263c>
+              <div class="shellFooter__content o-grid">
+                <div class="shellFooter__logo">
+                  <div>
+                    <svg
+                      width="167"
+                      height="167"
+                      viewBox="0 0 49 49"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.4623 42.9247C33.3157 42.9247 42.9247 33.3157 42.9247 21.4623C42.9247 9.60902 33.3157 0 21.4623 0C9.60902 0 0 9.60902 0 21.4623C0 33.3157 9.60902 42.9247 21.4623 42.9247Z"
+                        fill="#8DFFA2"
+                      ></path>
+                      <path
+                        d="M17.1701 23.2697C17.6219 22.7426 17.9985 22.0648 18.2244 21.3117C18.4503 20.5587 18.6009 19.7303 18.6009 18.7513C18.6009 17.6217 18.4503 16.6427 18.0738 15.8897C17.6972 15.1366 17.2454 14.5342 16.5676 14.1576C15.9652 13.7811 15.2874 13.5552 14.5344 13.5552C13.7813 13.5552 13.1035 13.7058 12.5011 14.007C11.8986 14.3082 11.5221 14.7601 11.2209 15.3625C10.9197 15.8897 10.769 16.5674 10.769 17.3205C10.769 17.9983 10.9197 18.6007 11.1456 19.1279C11.4468 19.655 11.8233 20.0315 12.2752 20.3328C12.8023 20.634 13.3295 20.7846 14.0072 20.7846C14.5344 20.7846 14.9862 20.7093 15.3627 20.4834C15.7393 20.3328 16.1158 20.1068 16.3417 19.8056C16.3417 20.634 16.1158 21.3117 15.5887 21.8389C15.1368 22.2907 14.4591 22.592 13.706 22.592C13.3295 22.592 12.8776 22.5166 12.5011 22.366C12.1246 22.2154 11.748 21.9895 11.3715 21.7636V23.9475C11.6727 24.1734 12.0493 24.324 12.5011 24.4746C12.9529 24.6252 13.3295 24.7005 13.7813 24.7005C15.2874 24.6252 16.417 24.1734 17.1701 23.2697ZM15.9652 18.1489C15.8146 18.3748 15.664 18.6007 15.3627 18.7513C15.1368 18.9019 14.8356 18.9772 14.5344 18.9772C14.2331 18.9772 14.0072 18.9019 13.706 18.7513C13.4801 18.6007 13.2542 18.4501 13.1035 18.1489C12.9529 17.923 12.8776 17.6217 12.8776 17.3958C12.8776 17.0946 12.9529 16.8687 13.1035 16.6427C13.2542 16.4168 13.4048 16.1909 13.706 16.0403C13.9319 15.8897 14.2331 15.8144 14.5344 15.8144C14.8356 15.8144 15.0615 15.8897 15.3627 16.0403C15.5887 16.1909 15.8146 16.3415 15.9652 16.6427C16.1158 16.8687 16.1911 17.1699 16.1911 17.3958C16.1158 17.6217 16.0405 17.8476 15.9652 18.1489Z"
+                        fill="black"
+                      ></path>
+                      <path
+                        d="M23.2697 23.4957L23.345 19.7304H28.1646C28.8424 19.7304 29.3695 19.5798 29.972 19.2033C30.4991 18.902 30.951 18.4502 31.2522 17.8477C31.5534 17.3206 31.704 16.7181 31.704 16.1157C31.704 15.5132 31.5534 14.9108 31.2522 14.3836C30.951 13.8565 30.4991 13.4047 29.972 13.0281C29.4448 12.7269 28.8424 12.501 28.1646 12.501H23.345H21.1611V14.6849V17.3959V19.5798V23.3451H21.2364H23.2697V23.4957ZM23.345 14.7602H28.1646C28.4659 14.7602 28.6918 14.8355 28.9177 14.9861C29.1436 15.1367 29.2942 15.2873 29.3695 15.5132C29.4448 15.7392 29.5202 15.9651 29.5202 16.191C29.5202 16.4169 29.4448 16.6428 29.3695 16.8688C29.2942 17.0947 29.0683 17.2453 28.9177 17.3959C28.6918 17.5465 28.4659 17.6218 28.1646 17.6218H23.345V14.7602Z"
+                        fill="black"
+                      ></path>
+                      <path
+                        d="M39.7618 20.6339C39.5359 15.739 37.4273 11.2206 33.8126 7.98246C30.1979 4.66898 25.5289 3.01224 20.634 3.23816C15.739 3.46407 11.2206 5.57266 7.98246 9.18737C4.66898 12.8021 3.01224 17.4711 3.23816 22.366C3.68999 32.1558 11.8231 39.8371 21.5376 39.8371C21.8389 39.8371 22.1401 39.8371 22.366 39.8371C27.2609 39.6112 31.7793 37.5026 35.0175 33.8879C38.331 30.1979 39.9877 25.5289 39.7618 20.6339ZM33.3607 32.3065C30.4991 35.4693 26.5079 37.352 22.2154 37.5779C21.9895 37.5779 21.6882 37.5779 21.4623 37.5779C12.9527 37.5779 5.79858 30.8756 5.42204 22.2154C5.19612 17.9229 6.70225 13.7811 9.5639 10.6182C12.4255 7.45532 16.4168 5.57266 20.7093 5.34674C20.9352 5.34674 21.2364 5.34674 21.4623 5.34674C25.4536 5.34674 29.2942 6.85287 32.3065 9.5639C35.4693 12.4255 37.352 16.4168 37.5779 20.7093C37.7285 25.0017 36.2977 29.1436 33.3607 32.3065Z"
+                        fill="black"
+                      ></path>
+                      <path
+                        d="M21.9144 30.4992C19.5045 30.6498 17.0947 29.7461 15.2874 28.1647L13.7812 29.8214C15.8898 31.7041 18.6009 32.7584 21.4625 32.7584C21.6131 32.7584 21.839 32.7584 21.9897 32.7584C26.4327 32.5324 30.424 29.7461 32.0807 25.6042L30.1228 24.7759C28.6919 28.0894 25.5291 30.3486 21.9144 30.4992Z"
+                        fill="black"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="shellFooter__contacts">
+                  <p class="shellFooter__title">ECRIVEZ-NOUS</p>
+                  <a href="mailto:hello@neuviemepage.com"
+                    >hello@neuviemepage.com</a
+                  >
+                </div>
+                <div class="shellFooter__socials">
+                  <p class="shellFooter__title">SUIVEZ-NOUS</p>
+                  <span class="shellFooter__socialsLogos"
+                    ><a
+                      href="https://www.facebook.com/neuviemepage"
+                      aria-label="go on facebook"
+                      target="_blank"
+                      ><div class="socialLogo">
+                        <svg
+                          width="34"
+                          height="34"
+                          viewbox="0 0 34 34"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M20.5835 12.6913V10.4348H18.5688C16.957 10.4348 15.6676 11.7242 15.6676 13.336V15.4313H13.6528V17.7685H15.6676V23.3291H18.1658V17.7685H20.0194L20.3418 15.4313H18.0852V13.739C18.0852 13.1749 18.5688 12.7719 19.0524 12.7719H20.5835V12.6913Z"
+                            fill="white"
+                          ></path>
+                          <circle
+                            r="14"
+                            stroke="white"
+                            cy="17"
+                            cx="17"
+                            stroke-width="0.5"
+                            stroke-dasharray="100"
+                          ></circle></svg
+                        ><span class="socialLogo__hiddenBlock"
+                          ><svg
+                            width="34"
+                            height="34"
+                            viewbox="0 0 34 34"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M20.5835 12.6913V10.4348H18.5688C16.957 10.4348 15.6676 11.7242 15.6676 13.336V15.4313H13.6528V17.7685H15.6676V23.3291H18.1658V17.7685H20.0194L20.3418 15.4313H18.0852V13.739C18.0852 13.1749 18.5688 12.7719 19.0524 12.7719H20.5835V12.6913Z"
+                              fill="black"
+                            ></path>
+                            <circle
+                              r="14"
+                              stroke="black"
+                              cy="17"
+                              cx="17"
+                              stroke-width="0.5"
+                              stroke-dasharray="100"
+                            ></circle></svg
+                        ></span></div></a
+                    ><a
+                      href="https://www.instagram.com/studio_9p/"
+                      aria-label="go on instagram"
+                      target="_blank"
+                      ><div class="socialLogo">
+                        <svg
+                          width="34"
+                          height="34"
+                          viewbox="0 0 33 34"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16.6065 20.1862C14.7529 20.1862 13.3022 18.7356 13.3022 16.882C13.3022 15.0285 14.7529 13.5779 16.6065 13.5779C18.46 13.5779 19.9106 15.0285 19.9106 16.882C19.9106 18.7356 18.3795 20.1862 16.6065 20.1862ZM16.6065 14.6255C15.3976 14.6255 14.4305 15.5926 14.4305 16.8015C14.4305 18.0103 15.3976 18.9774 16.6065 18.9774C17.8153 18.9774 18.7824 18.0103 18.7824 16.8015C18.7824 15.5926 17.8153 14.6255 16.6065 14.6255Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M19.6684 23.2485H13.5436C11.6901 23.2485 10.1589 21.7173 10.1589 19.8638V13.739C10.1589 11.8855 11.6901 10.3542 13.5436 10.3542H19.6684C21.522 10.3542 23.0532 11.8855 23.0532 13.739V19.8638C23.0532 21.7979 21.522 23.2485 19.6684 23.2485ZM13.4631 11.4825C12.2542 11.4825 11.2065 12.5302 11.2065 13.739V19.8638C11.2065 21.0726 12.2542 22.1203 13.4631 22.1203H19.5878C20.7967 22.1203 21.8444 21.0726 21.8444 19.8638V13.739C21.8444 12.5302 20.7967 11.4825 19.5878 11.4825H13.4631Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M19.9907 14.142C20.3913 14.142 20.716 13.8173 20.716 13.4167C20.716 13.0161 20.3913 12.6914 19.9907 12.6914C19.5901 12.6914 19.2654 13.0161 19.2654 13.4167C19.2654 13.8173 19.5901 14.142 19.9907 14.142Z"
+                            fill="white"
+                          ></path>
+                          <circle
+                            r="14"
+                            stroke="white"
+                            cy="17"
+                            cx="17"
+                            stroke-width="0.5"
+                            stroke-dasharray="100"
+                          ></circle></svg
+                        ><span class="socialLogo__hiddenBlock"
+                          ><svg
+                            width="34"
+                            height="34"
+                            viewbox="0 0 33 34"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M16.6065 20.1862C14.7529 20.1862 13.3022 18.7356 13.3022 16.882C13.3022 15.0285 14.7529 13.5779 16.6065 13.5779C18.46 13.5779 19.9106 15.0285 19.9106 16.882C19.9106 18.7356 18.3795 20.1862 16.6065 20.1862ZM16.6065 14.6255C15.3976 14.6255 14.4305 15.5926 14.4305 16.8015C14.4305 18.0103 15.3976 18.9774 16.6065 18.9774C17.8153 18.9774 18.7824 18.0103 18.7824 16.8015C18.7824 15.5926 17.8153 14.6255 16.6065 14.6255Z"
+                              fill="black"
+                            ></path>
+                            <path
+                              d="M19.6684 23.2485H13.5436C11.6901 23.2485 10.1589 21.7173 10.1589 19.8638V13.739C10.1589 11.8855 11.6901 10.3542 13.5436 10.3542H19.6684C21.522 10.3542 23.0532 11.8855 23.0532 13.739V19.8638C23.0532 21.7979 21.522 23.2485 19.6684 23.2485ZM13.4631 11.4825C12.2542 11.4825 11.2065 12.5302 11.2065 13.739V19.8638C11.2065 21.0726 12.2542 22.1203 13.4631 22.1203H19.5878C20.7967 22.1203 21.8444 21.0726 21.8444 19.8638V13.739C21.8444 12.5302 20.7967 11.4825 19.5878 11.4825H13.4631Z"
+                              fill="black"
+                            ></path>
+                            <path
+                              d="M19.9907 14.142C20.3913 14.142 20.716 13.8173 20.716 13.4167C20.716 13.0161 20.3913 12.6914 19.9907 12.6914C19.5901 12.6914 19.2654 13.0161 19.2654 13.4167C19.2654 13.8173 19.5901 14.142 19.9907 14.142Z"
+                              fill="black"
+                            ></path>
+                            <circle
+                              r="14"
+                              stroke="black"
+                              cy="17"
+                              cx="17"
+                              stroke-width="0.5"
+                              stroke-dasharray="100"
+                            ></circle></svg
+                        ></span></div></a
+                    ><a
+                      href="https://www.linkedin.com/company/studio9p/"
+                      aria-label="go on linkedin"
+                      target="_blank"
+                      ><div class="socialLogo">
+                        <svg
+                          width="34"
+                          height="34"
+                          viewbox="0 0 34 34"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 10.6263C9 10.1549 9.16892 9.76598 9.50676 9.4596C9.84459 9.15319 10.2838 9 10.8243 9C11.3552 9 11.7847 9.15083 12.1129 9.45253C12.4508 9.76364 12.6197 10.169 12.6197 10.6687C12.6197 11.1212 12.4556 11.4983 12.1274 11.8C11.7896 12.1111 11.3456 12.2667 10.7954 12.2667H10.7809C10.25 12.2667 9.82047 12.1111 9.49228 11.8C9.16409 11.4889 9 11.0976 9 10.6263ZM9.18822 23V13.5535H12.4025V23H9.18822ZM14.1834 23H17.3977V17.7253C17.3977 17.3953 17.4363 17.1407 17.5135 16.9616C17.6486 16.6411 17.8538 16.37 18.1289 16.1485C18.404 15.9269 18.749 15.8162 19.1641 15.8162C20.2452 15.8162 20.7857 16.5279 20.7857 17.9515V23H24V17.5838C24 16.1885 23.6622 15.1303 22.9865 14.4091C22.3108 13.6879 21.418 13.3273 20.3079 13.3273C19.0627 13.3273 18.0927 13.8505 17.3977 14.897V14.9253H17.3832L17.3977 14.897V13.5535H14.1834C14.2027 13.8552 14.2124 14.7933 14.2124 16.3677C14.2124 17.9421 14.2027 20.1529 14.1834 23Z"
+                            fill="white"
+                          ></path>
+                          <circle
+                            r="14"
+                            stroke="white"
+                            cy="17"
+                            cx="17"
+                            stroke-width="0.5"
+                            stroke-dasharray="100"
+                          ></circle></svg
+                        ><span class="socialLogo__hiddenBlock"
+                          ><svg
+                            width="34"
+                            height="34"
+                            viewbox="0 0 34 34"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9 10.6263C9 10.1549 9.16892 9.76598 9.50676 9.4596C9.84459 9.15319 10.2838 9 10.8243 9C11.3552 9 11.7847 9.15083 12.1129 9.45253C12.4508 9.76364 12.6197 10.169 12.6197 10.6687C12.6197 11.1212 12.4556 11.4983 12.1274 11.8C11.7896 12.1111 11.3456 12.2667 10.7954 12.2667H10.7809C10.25 12.2667 9.82047 12.1111 9.49228 11.8C9.16409 11.4889 9 11.0976 9 10.6263ZM9.18822 23V13.5535H12.4025V23H9.18822ZM14.1834 23H17.3977V17.7253C17.3977 17.3953 17.4363 17.1407 17.5135 16.9616C17.6486 16.6411 17.8538 16.37 18.1289 16.1485C18.404 15.9269 18.749 15.8162 19.1641 15.8162C20.2452 15.8162 20.7857 16.5279 20.7857 17.9515V23H24V17.5838C24 16.1885 23.6622 15.1303 22.9865 14.4091C22.3108 13.6879 21.418 13.3273 20.3079 13.3273C19.0627 13.3273 18.0927 13.8505 17.3977 14.897V14.9253H17.3832L17.3977 14.897V13.5535H14.1834C14.2027 13.8552 14.2124 14.7933 14.2124 16.3677C14.2124 17.9421 14.2027 20.1529 14.1834 23Z"
+                              fill="black"
+                            ></path>
+                            <circle
+                              r="14"
+                              stroke="black"
+                              cy="17"
+                              cx="17"
+                              stroke-width="0.5"
+                              stroke-dasharray="100"
+                            ></circle></svg
+                        ></span></div></a
+                  ></span>
+                </div>
+                <div class="shellFooter__adress">
+                  <p class="shellFooter__title">VENEZ-NOUS VOIR</p>
+                  <a
+                    href="https://goo.gl/maps/3XWYkEKvgZBAxT9K9"
+                    target="_blank"
+                    >126 rue La Fayette<br />75010 Paris</a
+                  ><br /><br /><a
+                    href="https://goo.gl/maps/HxPD5SdTLsxKj5Q97"
+                    target="_blank"
+                    >36 bis Rue Poquelin Molière<br />33000 Bordeaux</a
+                  >
+                </div>
+                <div class="shellFooter__copyright">
+                  © 2022 Studio 9P Tous droits réservés. brand design:
+                  <a href="https://studioouam.com" target="_blank"
+                    >Studio Ouam</a
+                  >, motion design:
+                  <a href="https://rafale.studio/" target="_blank"
+                    >Studio Rafale</a
+                  >, copy:
+                  <a href="https://millie.works" target="_blank"
+                    >Millie Servant</a
+                  >, traduction EN:
+                  <a href="https://www.martinesteyn.com/" target="_blank"
+                    >Martine Steyn</a
+                  >.
+                </div>
+              </div>
+            </footer>
+          </div>
+        </main>
+      </div>
+      <!--]-->
+    </div>
+    <script>
+      document.body.querySelector("#app").innerHTML = "";
+    </script>
+
+    <noscript
+      ><link rel="stylesheet" href="/assets/index.e98c17de.css"
+    /></noscript>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-12896855-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-12896855-1");
+    </script>
+  </body>
+</html>
